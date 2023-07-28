@@ -10,6 +10,9 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
     <link rel="stylesheet" href="src/styles.css" />
     <title>Weather App</title>
   </head>
@@ -39,8 +42,7 @@
             </div>
           </div>
         </form>
-        <h1 id="city"> 
-        </h1>
+        <h1 id="city"></h1>
         <ul>
           <li>last updated:<span id="date"></span></li>
           <li id="description"></li>
@@ -51,9 +53,10 @@
                 <div class ="clearfix weather-temperature img">
                 </div>
               <img
-                src=""
+                src=".."
                 alt="Cloudy icon"
-                class="weather-icon float-left"
+                id="icon"
+                class="float-left"
               />
               <div class="float-left">
                 <strong id="temperature">27</strong
@@ -67,10 +70,28 @@
           <div class="col-sm-6">
             <ul>
 
-    <li>Humidity:<span id="humidity"></span>%</li>
- <li> Wind:<span id="wind"></span>km/h</li>
+    <li>Humidity: <span id="humidity"></span>%</li>
+ <li> Wind: <span id="wind"></span>km/h</li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div class = "weather-forecast" id="forecast">
+        <div class = "row">
+            <div class = "col-2">
+                <div class = "weather-forecast-date">Fri</div>
+                <img
+                src = "https://openweathermap.org/img/wn/10d@2x.png"
+                alt=""
+                width="42"
+                />
+                <div class = "weather-forecast-temperatures">
+                <span class ="weather-forecast-temperature-max">
+                18° </span>
+                <span class ="weather-forecast-temperature-min">
+                12°  </span>
+                </div>
+            </div>
         </div>
       </div>
     </div>
